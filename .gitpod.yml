@@ -1,5 +1,3 @@
-image:
-  file: .gitpod.Dockerfile
 tasks:
   - name: Android Appetize info
     # Gitpod is not able to run emulators within a worspace at this stage as
