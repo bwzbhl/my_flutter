@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
               "my_first_flutter_app",
               style: TextStyle(
                   color: Colors.blue,
-                  fontSize: 18.0,
+                  fontSize: 25.0,
                   height: 1.2,
                   fontFamily: "Courier",
                   background: Paint()..color = Colors.grey,
@@ -114,12 +114,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   decorationStyle: TextDecorationStyle.dashed),
             ),
             ElevatedButton(
-              child: Text("normal"),
+              child: const Text("normal"),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.thumb_up),
+              icon: const Icon(Icons.thumb_up),
               onPressed: () {},
+            ),
+            // 圆形进度条直径指定为100
+            SizedBox(
+              height: 100,
+              width: 100,
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.grey[200],
+                valueColor: const AlwaysStoppedAnimation(Colors.blue),
+                value: .9,
+              ),
             ),
           ],
         ),
